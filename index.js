@@ -13,11 +13,17 @@ server.get('/', (req, res) => {
     res.send('You must point the route to /webhook.')
 });
 
-server.post('/webhook', (req, response) => {
-    const wwoApiKey = '95d09256b9464d7bbb1113011181304';    
+server.post('/webhook', (req, res) => {
+    let responseText = 'This is from the webhook!';
 
-    // Get entity parameters from req.body.result.parameters
-    // console.log(req.body.result.parameters);
+    res.json({
+        speech: responseText,
+        displayText: responseText
+    });
+});
+
+server.post('/weather', (req, response) => {
+    const wwoApiKey = '95d09256b9464d7bbb1113011181304';
 
     var dateString = '';
     var todaysDate = new Date();
