@@ -68,6 +68,8 @@ server.post('/webhook', (req, response) => {
     
 });
 
-server.listen((process.env.PORT || 8000), () => {
-    console.log("Server is up and running...");
+const port = process.env.PORT || 8000;
+
+server.listen(port, () => {
+    console.log("Server is up and running on port: " + port);
 });
