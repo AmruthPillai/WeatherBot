@@ -23,7 +23,7 @@ server.post('/webhook', (req, res) => {
 });
 
 server.post('/weather', (req, response) => {
-    const wwoApiKey = ''; // Get your free API key here: https://developer.worldweatheronline.com/
+    const wwoApiKey = process.env.WWO_API_KEY || ''; // Get your free API key here: https://developer.worldweatheronline.com/
 
     var dateString = '';
     var todaysDate = new Date();
