@@ -1,0 +1,6 @@
+{
+    "name": "WeatherBot",
+    "description": "A barebones Node.js + Dialogflow Chatbot that tells you the weather.",
+    "repository": "https://github.com/AmruthPillai/WeatherBot",
+    "keywords": ["node", "express", "dialogflow", "chatbot"]
+  }
